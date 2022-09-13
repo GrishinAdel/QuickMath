@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="presentation.Achievements"
+    android:background="@color/bluewhite">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:gravity="center"
+        android:text="@string/achiev"
+        android:textSize="40sp"
+        android:textColor="@color/white"
+        android:background="@color/blue2"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/cup_77_expression"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:paddingVertical="5dp"
+                android:background="@color/blackblue"
+                android:contentDescription="@string/betterResult"
+                android:src="@drawable/ic_better" />
+
+            <TextView
+                android:id="@+id/cup_77_expression_text"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:background="@color/blackblue"
+                android:textColor="@color/white"
+                android:text="@string/cup_77_expression" />
+
+            <ImageView
+                android:id="@+id/cup_777_expression"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:paddingVertical="5dp"
+                android:layout_marginTop="2dp"
+                android:background="@color/blackblue"
+                android:contentDescription="@string/betterResult"
+                android:src="@drawable/ic_better" />
+
+            <TextView
+                android:id="@+id/cup_777_expression_text"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:background="@color/blackblue"
+                android:textColor="@color/white"
+                android:text="@string/cup_777_expression" />
+
+            <ImageView
+                android:id="@+id/cup_7777_expression"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:paddingVertical="5dp"
+                android:layout_marginTop="2dp"
+                android:background="@color/blackblue"
+                android:contentDescription="@string/betterResult"
+                android:src="@drawable/ic_better" />
+
+            <TextView
+                android:id="@+id/cup_7777_expression_text"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:background="@color/blackblue"
+                android:textColor="@color/white"
+                android:text="@string/cup_7777_expression" />
+
+            <ImageView
+                android:id="@+id/cup_result_30"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:paddingVertical="5dp"
+                android:layout_marginTop="2dp"
+                android:background="@color/blackblue"
+                android:contentDescription="@string/betterResult"
+                android:src="@drawable/ic_better" />
+
+            <TextView
+                android:id="@+id/cup_result_30_text"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:background="@color/blackblue"
+                android:textColor="@color/white"
+                android:text="@string/cup_result_30" />
+
+            <ImageView
+                android:id="@+id/cup_result_50"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:paddingVertical="5dp"
+                android:layout_marginTop="2dp"
+                android:background="@color/blackblue"
+                android:contentDescription="@string/betterResult"
+                android:src="@drawable/ic_better" />
+
+            <TextView
+                android:id="@+id/cup_result_50_text"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:background="@color/blackblue"
+                android:textColor="@color/white"
+                android:text="@string/cup_result_50" />
+
+
+            <ImageView
+                android:id="@+id/cup_result_100"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:paddingVertical="5dp"
+                android:layout_marginTop="2dp"
+                android:background="@color/blackblue"
+                android:contentDescription="@string/betterResult"
+                android:src="@drawable/ic_better" />
+
+            <TextView
+                android:id="@+id/cup_result_100_text"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:background="@color/blackblue"
+                android:textColor="@color/white"
+                android:text="@string/cup_result_100" />
+
+            <ImageView
+                android:id="@+id/cup_all_mode"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:paddingVertical="5dp"
+                android:layout_marginTop="2dp"
+                android:background="@color/blackblue"
+                android:contentDescription="@string/betterResult"
+                android:src="@drawable/ic_better" />
+
+            <TextView
+                android:id="@+id/cup_all_mode_text"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:background="@color/blackblue"
+                android:textColor="@color/white"
+                android:text="@string/cup_all_mode" />
+
+            <ImageView
+                android:id="@+id/cup_have_5_cup"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:paddingVertical="5dp"
+                android:layout_marginTop="2dp"
+                android:background="@color/blackblue"
+                android:contentDescription="@string/betterResult"
+                android:src="@drawable/ic_better" />
+
+            <TextView
+                android:id="@+id/cup_have_5_cup_text"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:background="@color/blackblue"
+                android:textColor="@color/white"
+                android:text="@string/cup_have_5_cup" />
+
+
+
+
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+    <ImageButton
+        android:id="@+id/btn_ach_go_home"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_home"
+        android:background="@color/blue1"/>
+
+
+</LinearLayout>

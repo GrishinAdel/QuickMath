@@ -1,0 +1,88 @@
+<resources>
+    <string name="app_name">QuickMath</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="equal">=</string>
+    <string name="one">1</string>
+    <string name="two">2</string>
+    <string name="three">3</string>
+    <string name="four">4</string>
+    <string name="five">5</string>
+    <string name="six">6</string>
+    <string name="seven">7</string>
+    <string name="eight">8</string>
+    <string name="nine">9</string>
+    <string name="zero">0</string>
+    <string name="delete">⌫</string>
+    <string name="next">✔</string>
+    <string name="reply">reply</string>
+    <string name="home">home</string>
+    <string name="nextBtn">next</string>
+    <string name="adelvanchik">ADELVANCHIK</string>
+    <string name="cup_77_expression">Решить 77 примеров</string>
+    <string name="cup_777_expression">Решить 777 примеров</string>
+    <string name="cup_7777_expression">Решить 7777 примеров</string>
+    <string name="cup_result_30">Лучший результат больше 30</string>
+    <string name="cup_result_50">Лучший результат больше 50</string>
+    <string name="cup_result_100">Лучший результат больше 100</string>
+    <string name="stat_all_better_result">Общий лучший результат</string>
+    <string name="stat_count_expression">Правильно решенных примеров</string>
+    <string name="stat_count_cup">Количество кубков</string>
+    <string name="stat">Статистика</string>
+    <string name="stat_better_result_in_modes">Лучшие результаты в режимах (на время, тренировка)</string>
+    <string name="cup_all_mode">Попробовать каждый режим</string>
+    <string name="cup_have_5_cup">Получить 5 кубков</string>
+    <string name="Modes">Режимы</string>
+    <string name="intellect">Интеллект</string>
+    <string name="intellectlvl">Уровень интеллекта</string>
+    <string name="multiplicationDivision">Таблица умножения с делением</string>
+    <string name="multiplicationTable">Таблица умножения без деления</string>
+    <string name="additionSimple">Сложение и вычитание двухзначных чисел</string>
+    <string name="additionHundreds">Сложение и вычитание трехзначных чисел</string>
+    <string name="negativeAddition">Сложение и вычитание с отрицательными числами</string>
+    <string name="negativeMultiplication">Умножение и деление с отрицательными числами</string>
+    <string name="negativeMixed">Отрицательные числа в перемешку</string>
+    <string name="mixed">В перемешку</string>
+    <string name="Go">В Бой</string>
+    <string name="myResult">Текущий</string>
+    <string name="betterResult">Лучший</string>
+    <string name="iq">IQ</string>
+    <string name="result">Результат</string>
+    <string name="aboutApplication">О приложении</string>
+    <string name="setting">Настройки</string>
+    <string name="achiev">Достижения</string>
+    <string name="inTime">НА ВРЕМЯ</string>
+    <string name="training">Тренировка</string>
+    <string name="watch_stat">Посмотреть статистику</string>
+    <string name="YourName">Ваше имя</string>
+    <string name="Save">Сохранить</string>
+    <string name="lvl0">Амеба</string>
+    <string name="lvl1">Школота</string>
+    <string name="lvl2">Отличник</string>
+    <string name="lvl3">Зубрила</string>
+    <string name="lvl4">Математик</string>
+    <string name="lvl5">Одаренный</string>
+    <string name="lvl6">Профессор</string>
+    <string name="lvl7">Гений</string>
+    <string name="lvl8">Легенда</string>
+    <string name="lvlinfo">Чтобы повысить уровень интеллекта, решайте больше примеров</string>
+    <string name="infoApp">В приложении имеется 4 режима использования. В каждом из режимов необходимо решить пример за ограниченное количество времени. Игра завершается при неправильном ответе, либо по окончании времени решения примера </string>
+    <string name="title_activity_settings">SettingsActivity</string>
+
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+
+
+</resources>

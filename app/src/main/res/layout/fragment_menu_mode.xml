@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".presentation.Menu_mode">
+
+    <TextView
+        android:id="@+id/Setting"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:gravity="center"
+        android:text="@string/Modes"
+        android:textSize="40sp"
+        android:textColor="@color/white"
+        android:background="@color/blue2"/>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:layout_marginTop="1dp"
+    android:orientation="horizontal">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="189dp"
+        android:layout_height="40dp"
+        android:layout_weight="1"
+        android:background="@color/blue2"
+        android:gravity="center"
+        android:text="@string/inTime"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_train_mode"
+        android:layout_width="189dp"
+        android:layout_height="40dp"
+        android:layout_weight="1"
+        android:background="@color/bluewhite2"
+        android:gravity="center"
+        android:text="@string/training"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+    </LinearLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:background="@color/bluewhite">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/Btn_starting_multiplicationTable"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:background="@color/blue1"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/multiplicationTable"
+            android:textColor="@color/blueblack"
+            android:textSize="20sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/Btn_starting_multiplicationTableDivision"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_below="@id/Btn_starting_multiplicationTable"
+            android:layout_marginTop="3dp"
+            android:background="@color/blue1"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/multiplicationDivision"
+            android:textColor="@color/blueblack"
+            android:textSize="20sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/Btn_starting_additionSimple"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_below="@id/Btn_starting_multiplicationTableDivision"
+            android:layout_marginTop="3dp"
+            android:background="@color/blue1"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/additionSimple"
+            android:textColor="@color/blueblack"
+            android:textSize="20sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/Btn_starting_additionHundreds"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_below="@id/Btn_starting_additionSimple"
+            android:layout_marginTop="3dp"
+            android:background="@color/blue1"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/additionHundreds"
+            android:textColor="@color/blueblack"
+            android:textSize="20sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/Btn_starting_negative_multiplicationDivision"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_marginTop="3dp"
+            android:background="@color/blue1"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/negativeMultiplication"
+            android:textColor="@color/blueblack"
+            android:textSize="20sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/Btn_starting_negative_addition"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_marginTop="3dp"
+            android:background="@color/blue1"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/negativeAddition"
+            android:textColor="@color/blueblack"
+            android:textSize="20sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/Btn_starting_negative_mixed"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_marginTop="3dp"
+            android:background="@color/blue1"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/negativeMixed"
+            android:textColor="@color/blueblack"
+            android:textSize="20sp" />
+
+</LinearLayout>
+</ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:paddingTop="3dp"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+    <ImageButton
+        android:id="@+id/btn_menu_mode_go_to_home"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_home"
+        android:background="@color/blue1"/>
+    </LinearLayout>
+
+</LinearLayout>

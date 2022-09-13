@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainMenu">
+
+    <fragment
+        android:id="@+id/mainMenu"
+        android:name="com.adelvanchik.quickmath.presentation.MainMenu"
+        android:label="fragment_main_menu"
+        tools:layout="@layout/fragment_main_menu">
+        <action
+            android:id="@+id/action_mainMenu_to_menu_mode"
+            app:destination="@id/menu_mode" />
+        <action
+            android:id="@+id/action_mainMenu_to_profile"
+            app:destination="@id/profile" />
+        <action
+            android:id="@+id/action_mainMenu_to_setting"
+            app:destination="@id/setting" />
+        <action
+            android:id="@+id/action_mainMenu_to_info_app"
+            app:destination="@id/info_app" />
+        <action
+            android:id="@+id/action_mainMenu_to_achievements"
+            app:destination="@id/achievements" />
+        <action
+            android:id="@+id/action_mainMenu_to_menu_mode_2"
+            app:destination="@id/menu_mode_2" />
+    </fragment>
+    <fragment
+        android:id="@+id/menu_mode"
+        android:name="com.adelvanchik.quickmath.presentation.Menu_mode"
+        android:label="fragment_menu_mode"
+        tools:layout="@layout/fragment_menu_mode" >
+        <action
+            android:id="@+id/action_menu_mode_to_starting"
+            app:destination="@id/starting" />
+        <action
+            android:id="@+id/action_menu_mode_to_mainMenu"
+            app:destination="@id/mainMenu" />
+        <action
+            android:id="@+id/action_menu_mode_to_menu_mode_2"
+            app:destination="@id/menu_mode_2" />
+    </fragment>
+    <fragment
+        android:id="@+id/result"
+        android:name="com.adelvanchik.quickmath.presentation.Result"
+        android:label="fragment_result"
+        tools:layout="@layout/fragment_result" >
+        <action
+            android:id="@+id/action_result_to_menu_mode2"
+            app:destination="@id/menu_mode" />
+        <action
+            android:id="@+id/action_result_to_mainMenu2"
+            app:destination="@id/mainMenu" />
+        <action
+            android:id="@+id/action_result_to_starting"
+            app:destination="@id/starting" />
+    </fragment>
+    <fragment
+        android:id="@+id/starting"
+        android:name="com.adelvanchik.quickmath.presentation.Starting"
+        android:label="fragment_starting"
+        tools:layout="@layout/fragment_starting" >
+        <action
+            android:id="@+id/action_starting_to_result"
+            app:destination="@id/result" />
+    </fragment>
+    <fragment
+        android:id="@+id/achievements"
+        android:name="com.adelvanchik.quickmath.presentation.Achievements"
+        android:label="Achievements" >
+        <action
+            android:id="@+id/action_achievements_to_mainMenu"
+            app:destination="@id/mainMenu" />
+    </fragment>
+    <fragment
+        android:id="@+id/info_app"
+        android:name="com.adelvanchik.quickmath.presentation.Info_app"
+        android:label="Info_app" >
+        <action
+            android:id="@+id/action_info_app_to_mainMenu"
+            app:destination="@id/mainMenu" />
+    </fragment>
+    <fragment
+        android:id="@+id/profile"
+        android:name="com.adelvanchik.quickmath.presentation.Profile"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profile_to_mainMenu"
+            app:destination="@id/mainMenu" />
+        <action
+            android:id="@+id/action_profile_to_stat"
+            app:destination="@id/stat" />
+    </fragment>
+    <fragment
+        android:id="@+id/setting"
+        android:name="com.adelvanchik.quickmath.presentation.Setting"
+        android:label="Setting" >
+        <action
+            android:id="@+id/action_setting_to_mainMenu"
+            app:destination="@id/mainMenu" />
+    </fragment>
+    <fragment
+        android:id="@+id/menu_mode_2"
+        android:name="com.adelvanchik.quickmath.presentation.Menu_mode_2"
+        android:label="fragment_menu_mode_2"
+        tools:layout="@layout/fragment_menu_mode_2" >
+        <action
+            android:id="@+id/action_menu_mode_2_to_starting"
+            app:destination="@id/starting" />
+        <action
+            android:id="@+id/action_menu_mode_2_to_menu_mode"
+            app:destination="@id/menu_mode" />
+        <action
+            android:id="@+id/action_menu_mode_2_to_mainMenu"
+            app:destination="@id/mainMenu" />
+    </fragment>
+    <fragment
+        android:id="@+id/stat"
+        android:name="com.adelvanchik.quickmath.presentation.Stat"
+        android:label="fragment_stat"
+        tools:layout="@layout/fragment_stat" >
+        <action
+            android:id="@+id/action_stat_to_profile"
+            app:destination="@id/profile" />
+    </fragment>
+</navigation>

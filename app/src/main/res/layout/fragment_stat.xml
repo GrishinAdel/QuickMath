@@ -1,0 +1,513 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.Stat"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:paddingLeft="10dp"
+        android:paddingVertical="3dp"
+        android:paddingEnd="3dp"
+        android:layout_height="70dp"
+        android:gravity="center"
+        android:textSize="30sp"
+        android:background="@color/blue2"
+        android:textColor="@color/white"
+        android:text="@string/stat"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/bluewhite"
+            android:orientation="vertical">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:paddingLeft="10dp"
+            android:paddingVertical="3dp"
+            android:paddingEnd="3dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="25sp"
+            android:textColor="@color/blueblack"
+            android:text="@string/stat_better_result_in_modes"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:paddingLeft="10dp"
+                android:paddingVertical="3dp"
+                android:paddingEnd="3dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:textSize="20sp"
+                android:textColor="@color/blueblack"
+                android:text="@string/multiplicationTable"/>
+
+            <TextView
+                android:id="@+id/info_multiplication_inTime"
+                android:layout_width="match_parent"
+                android:paddingLeft="20dp"
+                android:paddingVertical="3dp"
+                android:paddingEnd="3dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:gravity="center_vertical"
+                android:textSize="20sp"
+                android:textColor="@color/blueblack"
+                android:text="213"/>
+
+            <TextView
+                android:id="@+id/info_multiplication_train"
+                android:layout_width="match_parent"
+                android:paddingLeft="20dp"
+                android:paddingVertical="3dp"
+                android:paddingEnd="3dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:gravity="center_vertical"
+                android:textSize="20sp"
+                android:textColor="@color/blueblack"
+                android:text="213"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:paddingLeft="10dp"
+                android:paddingVertical="3dp"
+                android:paddingEnd="3dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:textSize="20sp"
+                android:textColor="@color/blueblack"
+                android:text="@string/multiplicationDivision"/>
+
+            <TextView
+                android:id="@+id/info_multiplicationDivision_inTime"
+                android:layout_width="match_parent"
+                android:paddingLeft="20dp"
+                android:paddingVertical="3dp"
+                android:paddingEnd="3dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:gravity="center_vertical"
+                android:textSize="20sp"
+                android:textColor="@color/blueblack"
+                android:text="213"/>
+
+            <TextView
+                android:id="@+id/info_multiplicationDivision_train"
+                android:layout_width="match_parent"
+                android:paddingLeft="20dp"
+                android:paddingVertical="3dp"
+                android:paddingEnd="3dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:gravity="center_vertical"
+                android:textSize="20sp"
+                android:textColor="@color/blueblack"
+                android:text="213"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:paddingLeft="10dp"
+                android:paddingVertical="3dp"
+                android:paddingEnd="3dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:textSize="20sp"
+                android:textColor="@color/blueblack"
+                android:text="@string/additionSimple"/>
+
+            <TextView
+                android:id="@+id/info_simpleAddition_inTime"
+                android:layout_width="match_parent"
+                android:paddingLeft="20dp"
+                android:paddingVertical="3dp"
+                android:paddingEnd="3dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:gravity="center_vertical"
+                android:textSize="20sp"
+                android:textColor="@color/blueblack"
+                android:text="213"/>
+
+            <TextView
+                android:id="@+id/info_simpleAddition_train"
+                android:layout_width="match_parent"
+                android:paddingLeft="20dp"
+                android:paddingVertical="3dp"
+                android:paddingEnd="3dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:gravity="center_vertical"
+                android:textSize="20sp"
+                android:textColor="@color/blueblack"
+                android:text="213"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:paddingLeft="10dp"
+                android:paddingVertical="3dp"
+                android:paddingEnd="3dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:textSize="20sp"
+                android:textColor="@color/blueblack"
+                android:text="@string/additionHundreds"/>
+
+            <TextView
+                android:id="@+id/info_hundredsAddition_inTime"
+                android:layout_width="match_parent"
+                android:paddingLeft="20dp"
+                android:paddingVertical="3dp"
+                android:paddingEnd="3dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:gravity="center_vertical"
+                android:textSize="20sp"
+                android:textColor="@color/blueblack"
+                android:text="213"/>
+
+            <TextView
+                android:id="@+id/info_hundredsAddition_train"
+                android:layout_width="match_parent"
+                android:paddingLeft="20dp"
+                android:paddingVertical="3dp"
+                android:paddingEnd="3dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:gravity="center_vertical"
+                android:textSize="20sp"
+                android:textColor="@color/blueblack"
+                android:text="213"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:paddingLeft="10dp"
+                android:paddingVertical="3dp"
+                android:paddingEnd="3dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:textSize="20sp"
+                android:textColor="@color/blueblack"
+                android:text="@string/negativeMultiplication"/>
+
+            <TextView
+                android:id="@+id/info_negativeMultiplication_inTime"
+                android:layout_width="match_parent"
+                android:paddingLeft="20dp"
+                android:paddingVertical="3dp"
+                android:paddingEnd="3dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:gravity="center_vertical"
+                android:textSize="20sp"
+                android:textColor="@color/blueblack"
+                android:text="213"/>
+
+            <TextView
+                android:id="@+id/info_negativeMultiplication_train"
+                android:layout_width="match_parent"
+                android:paddingLeft="20dp"
+                android:paddingVertical="3dp"
+                android:paddingEnd="3dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:gravity="center_vertical"
+                android:textSize="20sp"
+                android:textColor="@color/blueblack"
+                android:text="213"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:paddingLeft="10dp"
+                android:paddingVertical="3dp"
+                android:paddingEnd="3dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:textSize="20sp"
+                android:textColor="@color/blueblack"
+                android:text="@string/negativeAddition"/>
+
+            <TextView
+                android:id="@+id/info_negativeAddition_inTime"
+                android:layout_width="match_parent"
+                android:paddingLeft="20dp"
+                android:paddingVertical="3dp"
+                android:paddingEnd="3dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:gravity="center_vertical"
+                android:textSize="20sp"
+                android:textColor="@color/blueblack"
+                android:text="213"/>
+
+            <TextView
+                android:id="@+id/info_negativeAddition_train"
+                android:layout_width="match_parent"
+                android:paddingLeft="20dp"
+                android:paddingVertical="3dp"
+                android:paddingEnd="3dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:gravity="center_vertical"
+                android:textSize="20sp"
+                android:textColor="@color/blueblack"
+                android:text="213"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:paddingLeft="10dp"
+                android:paddingVertical="3dp"
+                android:paddingEnd="3dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:textSize="20sp"
+                android:textColor="@color/blueblack"
+                android:text="@string/negativeMixed"/>
+
+            <TextView
+                android:id="@+id/info_negativeMixed_inTime"
+                android:layout_width="match_parent"
+                android:paddingLeft="20dp"
+                android:paddingVertical="3dp"
+                android:paddingEnd="3dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:gravity="center_vertical"
+                android:textSize="20sp"
+                android:textColor="@color/blueblack"
+                android:text="213"/>
+
+            <TextView
+                android:id="@+id/info_negativeMixed_train"
+                android:layout_width="match_parent"
+                android:paddingLeft="20dp"
+                android:paddingVertical="3dp"
+                android:paddingEnd="3dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:gravity="center_vertical"
+                android:textSize="20sp"
+                android:textColor="@color/blueblack"
+                android:text="213"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:paddingLeft="10dp"
+                android:paddingVertical="3dp"
+                android:paddingEnd="3dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:textSize="20sp"
+                android:textColor="@color/blueblack"
+                android:text="@string/mixed"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:paddingLeft="20dp"
+                android:paddingVertical="3dp"
+                android:paddingEnd="3dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:gravity="center_vertical"
+                android:textSize="20sp"
+                android:textColor="@color/blueblack"
+                android:text=""/>
+
+            <TextView
+                android:id="@+id/info_mixed_train"
+                android:layout_width="match_parent"
+                android:paddingLeft="20dp"
+                android:paddingVertical="3dp"
+                android:paddingEnd="3dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:gravity="center_vertical"
+                android:textSize="20sp"
+                android:textColor="@color/blueblack"
+                android:text="213"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:paddingLeft="10dp"
+                android:paddingVertical="3dp"
+                android:paddingEnd="3dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:textSize="20sp"
+                android:textColor="@color/blueblack"
+                android:text="@string/stat_all_better_result"/>
+
+            <TextView
+                android:id="@+id/info_better_result"
+                android:layout_width="match_parent"
+                android:paddingLeft="20dp"
+                android:paddingVertical="3dp"
+                android:paddingEnd="3dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:gravity="center_vertical"
+                android:textSize="20sp"
+                android:textColor="@color/blueblack"
+                android:text="213"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:paddingLeft="10dp"
+                android:paddingVertical="3dp"
+                android:paddingEnd="3dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:textSize="20sp"
+                android:textColor="@color/blueblack"
+                android:text="@string/stat_count_expression"/>
+
+            <TextView
+                android:id="@+id/info_count_expression"
+                android:layout_width="match_parent"
+                android:paddingLeft="20dp"
+                android:paddingVertical="3dp"
+                android:paddingEnd="3dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:gravity="center_vertical"
+                android:textSize="20sp"
+                android:textColor="@color/blueblack"
+                android:text="213"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:paddingLeft="10dp"
+                android:paddingVertical="3dp"
+                android:paddingEnd="3dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:textSize="20sp"
+                android:textColor="@color/blueblack"
+                android:text="@string/stat_count_cup"/>
+
+            <TextView
+                android:id="@+id/info_better_count_cup"
+                android:layout_width="match_parent"
+                android:paddingLeft="20dp"
+                android:paddingVertical="3dp"
+                android:paddingEnd="3dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:gravity="center_vertical"
+                android:textSize="20sp"
+                android:textColor="@color/blueblack"
+                android:text="213"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="vertical"
+        android:background="@color/blue1">
+
+        <ImageButton
+            android:id="@+id/btn_stat_go_profile"
+            android:layout_width="80dp"
+            android:layout_height="60dp"
+            android:backgroundTint="@android:color/transparent"
+            android:layout_gravity="center"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_arrowback"
+            />
+
+
+    </LinearLayout>
+
+</LinearLayout>

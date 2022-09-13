@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bluewhite"
+    tools:context=".presentation.Profile">
+
+    <EditText
+        android:id="@+id/namePerson"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:text=""
+        android:gravity="center"
+        android:textSize="30sp"
+        android:textColor="@color/white"
+        android:background="@color/blue2"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:paddingVertical="3dp"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:textColor="@color/blueblack"
+                android:text="@string/intellect"/>
+
+            <TextView
+                android:id="@+id/lvlInt_textView"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:gravity="center"
+                android:textSize="30sp"
+                android:textColor="@color/blueblack"
+                android:text="213"/>
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:textColor="@color/blueblack"
+                android:text="@string/intellectlvl"/>
+
+            <TextView
+                android:id="@+id/lvlInfo_TextView"
+                android:layout_width="match_parent"
+                android:paddingVertical="3dp"
+                android:paddingEnd="2dp"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:textSize="30sp"
+                android:textColor="@color/blueblack"
+                android:text="213"/>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:padding="5dp"
+                android:layout_marginTop="40dp"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:textColor="@color/blueblack"
+                android:text="@string/lvlinfo"/>
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_watch_stat"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:textSize="20sp"
+                android:text="@string/watch_stat"
+                android:backgroundTint="@android:color/transparent"
+                android:layout_gravity="center"
+                android:scaleType="fitXY"
+                />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blue1"
+        android:orientation="vertical">
+
+        <ImageButton
+            android:id="@+id/btn_profile_go_to_home"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:backgroundTint="@android:color/transparent"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_home" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
+
