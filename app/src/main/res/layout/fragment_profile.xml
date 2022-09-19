@@ -7,11 +7,11 @@
     android:background="@color/bluewhite"
     tools:context=".presentation.Profile">
 
-    <EditText
+    <TextView
         android:id="@+id/namePerson"
         android:layout_width="match_parent"
         android:layout_height="70dp"
-        android:text=""
+        android:text="@string/namePerson"
         android:gravity="center"
         android:textSize="30sp"
         android:textColor="@color/white"

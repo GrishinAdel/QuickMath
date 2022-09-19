@@ -1,0 +1,100 @@
+<resources>
+    <string name="app_name">MathQuick</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="equal">=</string>
+    <string name="one">1</string>
+    <string name="two">2</string>
+    <string name="three">3</string>
+    <string name="four">4</string>
+    <string name="five">5</string>
+    <string name="six">6</string>
+    <string name="seven">7</string>
+    <string name="eight">8</string>
+    <string name="nine">9</string>
+    <string name="zero">0</string>
+    <string name="delete">⌫</string>
+    <string name="next">✔</string>
+    <string name="reply">reply</string>
+    <string name="home">home</string>
+    <string name="nextBtn">next</string>
+    <string name="adelvanchik">ADELVANCHIK</string>
+    <string name="telegram">Telegram channel</string>
+    <string name="gmail">adelvanchik@gmail.com</string>
+    <string name="version">Application Version: 1.0</string>
+    <string name="support">If an error / bug is detected, you can write about it by mail or in the telegram channel</string>
+    <string name="getNewCup">A new cup has been received</string>
+    <string name="getNewLvl">A new level of intelligence has been achieved</string>
+    <string name="cup_77_expression">Solve 77 esamples</string>
+    <string name="cup_777_expression">Solve 777 examples</string>
+    <string name="cup_7777_expression">Solve 7777 examples</string>
+    <string name="cup_result_30">Best score over 30</string>
+    <string name="cup_result_50">Best score over 50</string>
+    <string name="cup_result_100">Best score over 100</string>
+    <string name="stat_all_better_result">Overall best score</string>
+    <string name="stat_count_expression">Correctly solved examples</string>
+    <string name="stat_count_cup">Number of cups</string>
+    <string name="stat">Statistics</string>
+    <string name="stat_better_result_in_modes">Best result in modes (for a while, training)</string>
+    <string name="cup_all_mode">Try every mode</string>
+    <string name="cup_have_5_cup">Get five cups</string>
+    <string name="Modes">Modes</string>
+    <string name="lvl">Level</string>
+    <string name="intellect">Inteligence</string>
+    <string name="intellectSmall">inteligence</string>
+    <string name="intellectlvl">Intelligence level</string>
+    <string name="Go">To battle</string>
+    <string name="myResult">Current</string>
+    <string name="betterResult">Best</string>
+    <string name="iq">IQ</string>
+    <string name="result">Result</string>
+    <string name="aboutApplication">About the application</string>
+    <string name="setting">Setting</string>
+    <string name="achiev">Achievements</string>
+    <string name="inTime">For a while</string>
+    <string name="training">TRAINING</string>
+    <string name="watch_stat">See statistics</string>
+    <string name="YourName">Your name</string>
+    <string name="Save">Save</string>
+    <string name="lvl0">Amoeba</string>
+    <string name="lvl1">Schoolboy</string>
+    <string name="lvl2">Crammed</string>
+    <string name="lvl3">Excellent student</string>
+    <string name="lvl4">Mathematician</string>
+    <string name="lvl5">Gifted</string>
+    <string name="lvl6">Professor</string>
+    <string name="lvl7">Genius</string>
+    <string name="lvl8">Legend</string>
+    <string name="namePerson">User</string>
+    <string name="language">Language</string>
+    <string name="profile">Profile</string>
+    <string name="sound">Sound</string>
+    <string name="touch">Pressing</string>
+    <string name="lvlinfo">To increase the level of intelligence solve more examples</string>
+    <string name="infoApp">В приложении имеется 4 режима использования. В каждом из режимов необходимо решить пример за ограниченное количество времени. Игра завершается при неправильном ответе, либо по окончании времени решения примера </string>
+    <string name="multiplicationDivision">Таблица умножения с делением</string>
+    <string name="multiplicationTable">Таблица умножения без деления</string>
+    <string name="additionSimple">Сложение и вычитание двухзначных чисел</string>
+    <string name="additionHundreds">Сложение и вычитание трехзначных чисел</string>
+    <string name="negativeAddition">Сложение / вычитание отрицательных чисел</string>
+    <string name="negativeMultiplication">Умножение / деление отрицательных чисел</string>
+    <string name="negativeMixed">Отрицательные числа</string>
+    <string name="mixed">Смешанный (без отрицательных)</string>
+    <string name="title_activity_settings">SettingsActivity</string>
+
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+
+
+</resources>

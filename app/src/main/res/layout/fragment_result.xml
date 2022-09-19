@@ -42,94 +42,66 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
                     android:orientation="horizontal">
 
                     <TextView
-                        android:layout_width="0dp"
-                        android:paddingLeft="50dp"
+                        android:id="@+id/betterResult"
+                        android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:layout_weight="60"
+                        android:text="29"
                         android:gravity="right"
-                        android:text="@string/betterResult"
                         android:textColor="@color/yellow"
-                        android:textSize="30sp"/>
+                        android:textSize="30sp"
+                        />
 
                     <ImageView
                         android:id="@+id/imageView2"
                         android:paddingTop="5dp"
-                        android:paddingBottom="25dp"
-                        android:layout_width="60dp"
-                        android:layout_height="60dp"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="left"
+                        android:layout_marginLeft="15dp"
                         android:src="@drawable/ic_better"
-                        />
-
-                    <TextView
-                        android:id="@+id/betterResult"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="45"
-                        android:text="29"
-                        android:textColor="@color/yellow"
-                        android:textSize="30sp"
                         />
 
 
                 </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/nowResult"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="17"
+                        android:textColor="@color/blueblack"
+                        android:textSize="30sp" />
 
 
-                <TextView
-                    android:layout_width="150dp"
-                    android:paddingRight="12dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:gravity="right"
-                    android:text="@string/myResult"
-                    android:textColor="@color/blueblack"
-                    android:textSize="30sp"
-                  />
-
-
-
-                <TextView
-                    android:id="@+id/nowResult"
-                    android:layout_width="120dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:paddingLeft="37dp"
-                    android:text="17"
-                    android:textColor="@color/blueblack"
-                    android:textSize="30sp" />
-
-            </LinearLayout>
-
-                <TextView
-                    android:id="@+id/iqAdd"
-                    android:layout_width="match_parent"
-                    android:layout_height="64dp"
-                    android:gravity="center"
-                    android:text="интеллект + 2412"
-                    android:textColor="@color/white"
-                    android:textSize="30sp"
-                    />
+                    <TextView
+                        android:id="@+id/iqAdd"
+                        android:layout_width="match_parent"
+                        android:layout_height="64dp"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="@color/white"
+                        android:textSize="30sp"
+                        />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
                     android:layout_marginTop="15dp"
+                    android:gravity="center"
                     android:orientation="horizontal">
+
 
 
                     <TextView
                         android:id="@+id/expression_correct_answer"
-                        android:layout_width="150dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:layout_weight="1"
                         android:gravity="right"
                         android:text="2 + 15 ="
                         android:textSize="30sp" />
@@ -137,33 +109,31 @@
                     <TextView
                         android:id="@+id/expression_correct_answer2"
                         android:paddingLeft="10dp"
-                        android:layout_width="100dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:layout_weight="1"
                         android:text="999"
                         android:textColor="@color/green2"
                         android:textSize="30sp"
                         />
+
 
                 </LinearLayout>
 
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="80dp"
+                android:layout_height="100dp"
                 android:layout_marginTop="15dp"
+                android:gravity="center"
                 android:orientation="horizontal">
 
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:layout_height="match_parent"/>
+
 
                     <ImageButton
                         android:id="@+id/btn_home"
-                        android:padding="15dp"
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
+                        android:padding="25dp"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
                         android:layout_gravity="center"
                         android:contentDescription="@string/home"
                         android:scaleType="fitXY"
@@ -174,9 +144,9 @@
 
                     <ImageButton
                         android:id="@+id/btn_reply"
-                        android:padding="15dp"
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
+                        android:padding="25dp"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
                         android:layout_gravity="center"
                         android:background="@color/blue2"
                         android:contentDescription="@string/reply"
@@ -187,9 +157,9 @@
 
                     <ImageButton
                         android:id="@+id/btn_next"
-                        android:padding="15dp"
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
+                        android:padding="25dp"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
                         android:layout_gravity="center"
                         android:background="@color/blue2"
                         android:contentDescription="@string/reply"
@@ -197,12 +167,18 @@
                         android:src="@drawable/ic_next"
                         />
 
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:layout_height="match_parent"/>
-
             </LinearLayout>
+
+                <com.yandex.mobile.ads.banner.BannerAdView
+                    xmlns:ads="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/banner"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="30dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    ads:adUnitId="R-M-344723-10"
+                    ads:adSize="BANNER"
+                    />
 
         </LinearLayout>
 

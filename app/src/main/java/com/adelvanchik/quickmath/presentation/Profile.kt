@@ -35,11 +35,16 @@ class Profile : Fragment() {
 
 
         vm.get_lvlInfo().observe(viewLifecycleOwner, {
-            if (it.equals("0")) lvlInfoTextView?.text = "Амеба"
+            if (it.equals("0")) lvlInfoTextView?.text = resources.getString(R.string.lvl0)
             else lvlInfoTextView?.text = it
         })
         vm.get_lvlInt().observe(viewLifecycleOwner, {
             lvlIntTextView?.text = it.toString()
+        })
+
+        val namePerson = view?.findViewById<TextView>(R.id.namePerson)
+        vm.get_namePerson().observe(viewLifecycleOwner, {
+            if (!it.equals("0")) namePerson?.text = it
         })
 
 

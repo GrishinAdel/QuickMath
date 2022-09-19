@@ -15,7 +15,7 @@ import com.adelvanchik.domain.usecases.negativeMultiplication.GetRandomExpressio
 class GeneratorExpressionUseCase() {
 
     fun execute(mode: String): ExpressionWithResult {
-        val choice = (1..2).random()
+        val choice = (1..2).shuffled().first()
         var expression: ExpressionWithResult
         when (mode) {
             "HundredsAdditionSubtraction" -> {
@@ -45,7 +45,7 @@ class GeneratorExpressionUseCase() {
                     GetRandomExpressionNegativeMultiplicationseCase().execute()
                 else expression = GetRandomExpressionNegativeDivisionseCase().execute()
             } "NegativeMixed" -> {
-                val mixed = (1..2).random()
+                val mixed = (1..2).shuffled().first()
                 if (mixed == 1) {
                     if (choice == 1) expression =
                         GetRandomExpressionNegativeSubtractionseCase().execute()
@@ -56,7 +56,7 @@ class GeneratorExpressionUseCase() {
                     else expression = GetRandomExpressionNegativeDivisionseCase().execute()
                 }
             } "mixed" -> {
-                val mixed = (1..3).random()
+                val mixed = (1..3).shuffled().first()
                 if (mixed == 1) {
                     if (choice == 1) expression =
                         GetRandomExpressionSubtractionHundredsUseCase().execute()

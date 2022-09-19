@@ -27,27 +27,70 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="@string/infoApp"
-        android:padding="10dp"
-        android:layout_margin="3dp"
-        android:textSize="30sp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/infoApp"
+                android:padding="10dp"
+                android:textColor="@color/blueblack"
+                android:layout_margin="3dp"
+                android:textSize="25sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/version"
+                android:padding="10dp"
+                android:layout_marginTop="60dp"
+                android:textColor="@color/white"
+                android:layout_margin="3dp"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/support"
+                android:padding="10dp"
+                android:layout_marginTop="30dp"
+                android:textColor="@color/blueblack"
+                android:layout_margin="3dp"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/gmail"
+                android:padding="10dp"
+                android:gravity="center"
+                android:layout_marginTop="30dp"
+                android:textColor="@color/blueblack"
+                android:layout_margin="3dp"
+                android:textSize="15sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_go_telegram"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:text="@string/telegram"
+                android:background="@color/bluewhite2"
+                android:layout_marginHorizontal="40dp"
+                android:layout_marginBottom="30dp"
+                />
 
         </LinearLayout>
     </ScrollView>
 
     <ImageButton
         android:id="@+id/btn_infoApp_go_to_home"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:backgroundTint="@android:color/transparent"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/blue1"
         android:layout_gravity="center"
-        android:scaleType="fitXY"
         android:src="@drawable/ic_home"
         />
 

@@ -6,6 +6,9 @@ import androidx.lifecycle.ViewModel
 import com.adelvanchik.domain.usecases.betterResult.GetDataUseCase
 import com.adelvanchik.domain.usecases.betterResult.SaveDataUseCase
 import android.R
+import android.content.res.Resources
+import android.provider.Settings.Global.getString
+import androidx.core.content.ContentProviderCompat.requireContext
 
 
 class ResultViewModel(private val saveDataUseCase: SaveDataUseCase,
@@ -59,27 +62,11 @@ class ResultViewModel(private val saveDataUseCase: SaveDataUseCase,
         val rate: Int = getDataUseCase.execute(key = "rate").toInt()
         val result: Int = rate + nowResult
         saveDataUseCase.execute(value = result.toString(), key = "rate")
-        rateNow.value = "Интеллект $result"
+        rateNow.value = "$result"
 
         val expressionCounter: Int = getDataUseCase.execute(key = "expressionCounter").toInt()
         val resultExpressionCounter: Int = expressionCounter + lvl
         saveDataUseCase.execute(value = resultExpressionCounter.toString(), key = "expressionCounter")
-
-        val lvlInfo: String = getDataUseCase.execute(key = "lvlInfo")
-        var lvlInfoMaybeNew: String = ""
-        if (result>100000) lvlInfoMaybeNew = "Легенда"
-        else if (result > 50000) lvlInfoMaybeNew = "Гений"
-        else if (result > 30000) lvlInfoMaybeNew = "Профессор"
-        else if (result > 10000) lvlInfoMaybeNew = "Математик"
-        else if (result > 3000) lvlInfoMaybeNew = "Любимчик"
-        else if (result > 300) lvlInfoMaybeNew = "Зубрила"
-        else lvlInfoMaybeNew = "Амеба"
-
-        if (!lvlInfo.equals(lvlInfoMaybeNew)) {
-            newLvl.value = true
-        }
-
-        saveDataUseCase.execute(key = "lvlInfo", value = lvlInfoMaybeNew)
     }
 
     private val cup = MutableLiveData<Boolean>()
@@ -167,6 +154,14 @@ class ResultViewModel(private val saveDataUseCase: SaveDataUseCase,
         }
         saveDataUseCase.execute(value = countCup.toString(), key = "countCup")
 
+    }
+
+    fun checkNewLvl(MaybeNewLvl: String) {
+        val lvlInfo: String = getDataUseCase.execute(key = "lvlInfo")
+        if (!lvlInfo.equals(MaybeNewLvl)) {
+            newLvl.value = true
+        }
+        saveDataUseCase.execute(key = "lvlInfo", value = MaybeNewLvl)
     }
 
 }

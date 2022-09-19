@@ -99,7 +99,8 @@
     <fragment
         android:id="@+id/setting"
         android:name="com.adelvanchik.quickmath.presentation.Setting"
-        android:label="Setting" >
+        android:label="Setting"
+        tools:layout="@layout/fragment_setting">
         <action
             android:id="@+id/action_setting_to_mainMenu"
             app:destination="@id/mainMenu" />

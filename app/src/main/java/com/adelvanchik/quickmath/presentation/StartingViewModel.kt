@@ -6,6 +6,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.adelvanchik.domain.models.ExpressionWithResult
 import com.adelvanchik.domain.usecases.GeneratorExpressionUseCase
+import com.adelvanchik.domain.usecases.betterResult.GetDataUseCase
 import com.adelvanchik.domain.usecases.expressionHundreds.GetRandomExpressionAdditionHundredsUseCase
 import com.adelvanchik.domain.usecases.expressionHundreds.GetRandomExpressionSubtractionHundredsUseCase
 import com.adelvanchik.domain.usecases.expressionSimple.GetRandomExpressionAdditionSimpleUseCase
@@ -17,17 +18,20 @@ class StartingViewModel(private val getRandomExpressionSubtractionSimpleUseCase:
                         private val getRandomExpressionSubtractionHundredsUseCase: GetRandomExpressionSubtractionHundredsUseCase,
                         private val getRandomExpressionMultiplicationTableUseCase: GetRandomExpressionMultiplicationTableUseCase,
                         private val getRandomExpressionMultiplicationTableDivisionUseCase: GetRandomExpressionMultiplicationTableDivisionUseCase,
-                        private val generatorExpressionUseCase: GeneratorExpressionUseCase): ViewModel() {
+                        private val generatorExpressionUseCase: GeneratorExpressionUseCase,
+                        private val getDataUseCase: GetDataUseCase): ViewModel() {
 
     init {
 
     }
 
     fun start(mode: String, isTime: String) {
+        first_load.value = true
+        sound.value = getDataUseCase.execute("sound")
+        soundClick.value = getDataUseCase.execute("soundClick").toInt()
         myMode = mode
         myIsTime = isTime
         if (myIsTime.equals("yes")) timerDown = timerDownFirstValue()
-        first_load.value = false
         correct_result.value = "-1"
         time_out.value = false
         Log.e("SVM","Первый старт")
@@ -73,10 +77,20 @@ class StartingViewModel(private val getRandomExpressionSubtractionSimpleUseCase:
     private val timer_data = MutableLiveData<Long>()            // Таймер
     private val first_load = MutableLiveData<Boolean>()         // Отсчитался ли первый таймер
     private val time_out = MutableLiveData<Boolean>()           // Закончилось ли время
+    private val sound = MutableLiveData<String>()               // Режим звука (включен/выключен)
+    private val soundClick = MutableLiveData<Int>()               // Режим звука тыканья по кнопкам
 
 
 
     // Получение LiveData во фрагменте
+    fun getSound(): MutableLiveData<String> {
+        return sound
+    }
+
+    fun getSoundClick(): MutableLiveData<Int> {
+        return soundClick
+    }
+
     fun getExpression(): MutableLiveData<String> {
         return expression
     }
@@ -100,6 +114,11 @@ class StartingViewModel(private val getRandomExpressionSubtractionSimpleUseCase:
     fun getTimeOut(): MutableLiveData<Boolean> {
         return time_out
     }
+
+    fun getFirst_load(): MutableLiveData<Boolean> {
+        return first_load
+    }
+
 
 
     // Обнуление LiveData после перехода с фрагмента на другой
@@ -141,7 +160,6 @@ class StartingViewModel(private val getRandomExpressionSubtractionSimpleUseCase:
             answer.value = result
         }
     }
-
 
     // Функция удаления последнего элемента в ответе
     fun delete() {

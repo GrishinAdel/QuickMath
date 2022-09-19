@@ -11,63 +11,63 @@ class RandomExpression() {
         var secondSign: Int = 1
         when(params) {
             "+" -> {
-                firstNumber = (first..last-1).random()
-                secondNumber = (first..(last - firstNumber)).random()
+                firstNumber = (first..last-1).shuffled().first()
+                secondNumber = (first..(last - firstNumber)).shuffled().first()
                 result = firstNumber + secondNumber
 
             }
             "-" -> {
-                firstNumber = (first..last).random()
-                secondNumber = (first..firstNumber).random()
+                firstNumber = (first..last).shuffled().first()
+                secondNumber = (first..firstNumber).shuffled().first()
                 result = firstNumber - secondNumber
             }
             "*" -> {
-                firstNumber = (first..last).random()
-                secondNumber = (first..last).random()
+                firstNumber = (first..last).shuffled().first()
+                secondNumber = (first..last).shuffled().first()
                 result = firstNumber * secondNumber
             }
             "/" -> {
-                firstNumber = (first..last).random()
-                secondNumber = (first..last).random()
+                firstNumber = (first..last).shuffled().first()
+                secondNumber = (first..last).shuffled().first()
                 result = firstNumber
                 firstNumber *= secondNumber
             }
             "-*" -> {
-                val randomSign = (1..2).random()
+                val randomSign = (1..2).shuffled().first()
                 if (randomSign==1) firstSign = -1
                 else firstSign = 1
 
-                val randomSign2 = (1..2).random()
+                val randomSign2 = (1..2).shuffled().first()
                 if (randomSign2==1) secondSign = -1
                 else secondSign = 1
 
-                firstNumber = (first..last).random() * firstSign
-                secondNumber = (first..last).random() * secondSign
+                firstNumber = (first..last).shuffled().first() * firstSign
+                secondNumber = (first..last).shuffled().first() * secondSign
                 result = firstNumber * secondNumber
             }
             "-/" -> {
-                val randomSign = (1..2).random()
+                val randomSign = (1..2).shuffled().first()
                 if (randomSign==1) firstSign = -1
                 else firstSign = 1
 
-                val randomSign2 = (1..2).random()
+                val randomSign2 = (1..2).shuffled().first()
                 if (randomSign2==1) secondSign = -1
                 else secondSign = 1
 
-                firstNumber = (first..last).random() * firstSign
-                secondNumber = (first..last).random() * secondSign
+                firstNumber = (first..last).shuffled().first() * firstSign
+                secondNumber = (first..last).shuffled().first() * secondSign
                 result = firstNumber
                 firstNumber *= secondNumber
             }
             "-+" -> {
-                firstNumber = (first..last).random()
-                secondNumber = (first..last).random()
+                firstNumber = (first..last).shuffled().first()
+                secondNumber = (first..last).shuffled().first()
                 result = firstNumber + secondNumber
 
             }
             "--" -> {
-                firstNumber = (first..last).random()
-                secondNumber = (first..last).random()
+                firstNumber = (first..last).shuffled().first()
+                secondNumber = (first..last).shuffled().first()
                 result = firstNumber - secondNumber
             }
         }

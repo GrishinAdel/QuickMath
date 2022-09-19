@@ -16,11 +16,16 @@ class ProfileViewModel(private val getDataUseCase: GetDataUseCase): ViewModel() 
         return lvlInfo
     }
 
+    private val namePerson = MutableLiveData<String>()
+    fun get_namePerson(): MutableLiveData<String> {
+        return namePerson
+    }
+
     fun info() {
 
         lvlInt.value = getDataUseCase.execute(key = "rate").toInt()
         lvlInfo.value = getDataUseCase.execute(key = "lvlInfo")
-
+        namePerson.value = getDataUseCase.execute(key = "namePerson")
 
     }
 }

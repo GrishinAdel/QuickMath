@@ -23,6 +23,7 @@ class Starting : Fragment() {
     val bundle = Bundle()
 
     private var timer: CountDownTimer? = null
+    private var sound: Boolean = true
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -35,8 +36,9 @@ class Starting : Fragment() {
         val isTime: String = arguments?.getString("time").toString()
         bundle.putString("time", isTime)
 
-        vm.start(mode, isTime)
-
+        if (vm.getFirst_load().value != true) {
+            vm.start(mode, isTime)
+        }
         return inflater.inflate(R.layout.fragment_starting, container, false)
     }
 
@@ -50,9 +52,11 @@ class Starting : Fragment() {
             "raw", activity?.packageName)
         val soundAnswerCorrect= MediaPlayer.create(context, answerCorrectId)
 
-        val buttonId = getResources().getIdentifier(R.raw.sound_button.toString(),
+
+        var buttonId = getResources().getIdentifier(R.raw.sound_button.toString(),
             "raw", activity?.packageName)
-        val soundButton= MediaPlayer.create(context, buttonId)
+        var soundButton= MediaPlayer.create(context, buttonId)
+
 
         // Кнопка проверки ответа
         val btn_Next = view?.findViewById<Button>(R.id.Btn_Next)
@@ -66,7 +70,7 @@ class Starting : Fragment() {
                 Log.e("Starting","Кнопка нажимается. Отправляем запрос на проверку ответа")
                 if (vm.Check_answer()) {
 
-                    soundAnswerCorrect.start()
+                    if (sound) soundAnswerCorrect.start()
                     vm.createExpression()
                     btn_Next.setBackgroundColor(Color.parseColor("#11d418"))
                     timer = object: CountDownTimer(50, 1) {
@@ -104,62 +108,62 @@ class Starting : Fragment() {
         val btn_delete_last = view?.findViewById<Button>(R.id.btn_delete_last)
 
         btn_zero?.setOnClickListener {
-            soundButton.start()
+            if (sound) soundButton.start()
             vm.Input_answer("0")
         }
 
         btn_one?.setOnClickListener {
-            soundButton.start()
+            if (sound) soundButton.start()
             vm.Input_answer("1")
         }
 
         btn_two?.setOnClickListener {
-            soundButton.start()
+            if (sound) soundButton.start()
             vm.Input_answer("2")
         }
 
         btn_three?.setOnClickListener {
-            soundButton.start()
+            if (sound) soundButton.start()
             vm.Input_answer("3")
         }
 
         btn_four?.setOnClickListener {
-            soundButton.start()
+            if (sound) soundButton.start()
             vm.Input_answer("4")
         }
 
         btn_five?.setOnClickListener {
-            soundButton.start()
+            if (sound) soundButton.start()
             vm.Input_answer("5")
         }
 
         btn_six?.setOnClickListener {
-            soundButton.start()
+            if (sound) soundButton.start()
             vm.Input_answer("6")
         }
 
         btn_seven?.setOnClickListener {
-            soundButton.start()
+            if (sound) soundButton.start()
             vm.Input_answer("7")
         }
 
         btn_eight?.setOnClickListener {
-            soundButton.start()
+            if (sound) soundButton.start()
             vm.Input_answer("8")
         }
 
         btn_nine?.setOnClickListener {
-            soundButton.start()
+            if (sound) soundButton.start()
             vm.Input_answer("9")
         }
 
         btn_minus?.setOnClickListener {
-            soundButton.start()
+            if (sound) soundButton.start()
             vm.Input_answer("-")
         }
 
         btn_delete_last?.setOnClickListener {
-            soundButton.start()
+            if (sound) soundButton.start()
             vm.delete()
         }
 
@@ -191,11 +195,41 @@ class Starting : Fragment() {
         // Получние информации об уровне
         val lvl = view?.findViewById<TextView>(R.id.count)
         vm.getLvl().observe(viewLifecycleOwner, {
-            lvl?.text = "Lvl: ${it}"
+            val lvlInformation: String = resources.getString(R.string.lvl)
+            lvl?.text = "${lvlInformation}: ${it}"
         })
 
         vm.getTimeOut().observe(viewLifecycleOwner, {
             if (it) go_result()
+        })
+
+        vm.getSound().observe(viewLifecycleOwner, {
+            if (it.equals("0") or it.equals("off")) sound = false
+            else sound = true
+        })
+
+        vm.getSoundClick().observe(viewLifecycleOwner, {
+            when(it) {
+                0 -> {
+                buttonId = getResources().getIdentifier(R.raw.sound_button.toString(),
+                    "raw", activity?.packageName)
+                soundButton= MediaPlayer.create(context, buttonId)
+            }
+                1 -> {
+                buttonId = getResources().getIdentifier(R.raw.sound_button2.toString(),
+                    "raw", activity?.packageName)
+                soundButton= MediaPlayer.create(context, buttonId)
+            }
+                2 -> {
+
+                }
+                3 -> {
+
+                }
+                4 -> {
+
+                }
+            }
         })
     }
 
@@ -214,7 +248,7 @@ class Starting : Fragment() {
         vm.DefaultFirstLoad()
         vm.DefaultTimerDown()
         bundle.putInt("lvl", vm.getLvl().value!! - 1)
-        soundAnswerWrong.start()
+        if (sound) soundAnswerWrong.start()
         (activity as MainActivity).navController.navigate(R.id.action_starting_to_result, bundle)
     }
 
