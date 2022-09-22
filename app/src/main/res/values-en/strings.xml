@@ -17,48 +17,49 @@
     <string name="reply">reply</string>
     <string name="home">home</string>
     <string name="nextBtn">next</string>
+    <string name="lock">?</string>
     <string name="adelvanchik">ADELVANCHIK</string>
     <string name="telegram">Telegram channel</string>
     <string name="gmail">adelvanchik@gmail.com</string>
     <string name="version">Application Version: 1.0</string>
-    <string name="support">If an error / bug is detected, you can write about it by mail or in the telegram channel</string>
+    <string name="support">If an error / bug is detected, you can e-mail or write in the telegram chat</string>
     <string name="getNewCup">A new cup has been received</string>
     <string name="getNewLvl">A new level of intelligence has been achieved</string>
-    <string name="cup_77_expression">Solve 77 esamples</string>
-    <string name="cup_777_expression">Solve 777 examples</string>
-    <string name="cup_7777_expression">Solve 7777 examples</string>
-    <string name="cup_result_30">Best score over 30</string>
-    <string name="cup_result_50">Best score over 50</string>
-    <string name="cup_result_100">Best score over 100</string>
-    <string name="stat_all_better_result">Overall best score</string>
-    <string name="stat_count_expression">Correctly solved examples</string>
-    <string name="stat_count_cup">Number of cups</string>
+    <string name="cup_77_expression">To solve 77 tasks</string>
+    <string name="cup_777_expression">To solve 777 tasks</string>
+    <string name="cup_7777_expression">To solve 7777 tasks</string>
+    <string name="cup_result_30">The best score is over 30</string>
+    <string name="cup_result_50">The best score is over 50</string>
+    <string name="cup_result_100">The best score is over 100</string>
+    <string name="stat_all_better_result">The overall best score</string>
+    <string name="stat_count_expression">A number of correctly solved tasks </string>
+    <string name="stat_count_cup">A number of cups</string>
     <string name="stat">Statistics</string>
-    <string name="stat_better_result_in_modes">Best result in modes (for a while, training)</string>
-    <string name="cup_all_mode">Try every mode</string>
-    <string name="cup_have_5_cup">Get five cups</string>
+    <string name="stat_better_result_in_modes">The best result in modes (timer, training)</string>
+    <string name="cup_all_mode">To try every mode</string>
+    <string name="cup_have_5_cup">To get five cups</string>
     <string name="Modes">Modes</string>
     <string name="lvl">Level</string>
-    <string name="intellect">Inteligence</string>
-    <string name="intellectSmall">inteligence</string>
+    <string name="intellect">Intelligence</string>
+    <string name="intellectSmall">intelligence</string>
     <string name="intellectlvl">Intelligence level</string>
     <string name="Go">To battle</string>
-    <string name="myResult">Current</string>
-    <string name="betterResult">Best</string>
+    <string name="myResult">The current</string>
+    <string name="betterResult">The best</string>
     <string name="iq">IQ</string>
-    <string name="result">Result</string>
+    <string name="result">The result</string>
     <string name="aboutApplication">About the application</string>
     <string name="setting">Setting</string>
     <string name="achiev">Achievements</string>
-    <string name="inTime">For a while</string>
+    <string name="inTime">TIMER</string>
     <string name="training">TRAINING</string>
     <string name="watch_stat">See statistics</string>
     <string name="YourName">Your name</string>
     <string name="Save">Save</string>
-    <string name="lvl0">Amoeba</string>
+    <string name="lvl0">Ameba</string>
     <string name="lvl1">Schoolboy</string>
-    <string name="lvl2">Crammed</string>
-    <string name="lvl3">Excellent student</string>
+    <string name="lvl2">Swot</string>
+    <string name="lvl3">Straight-A student</string>
     <string name="lvl4">Mathematician</string>
     <string name="lvl5">Gifted</string>
     <string name="lvl6">Professor</string>
@@ -68,18 +69,25 @@
     <string name="language">Language</string>
     <string name="profile">Profile</string>
     <string name="sound">Sound</string>
-    <string name="touch">Pressing</string>
-    <string name="lvlinfo">To increase the level of intelligence solve more examples</string>
-    <string name="infoApp">В приложении имеется 4 режима использования. В каждом из режимов необходимо решить пример за ограниченное количество времени. Игра завершается при неправильном ответе, либо по окончании времени решения примера </string>
-    <string name="multiplicationDivision">Таблица умножения с делением</string>
-    <string name="multiplicationTable">Таблица умножения без деления</string>
-    <string name="additionSimple">Сложение и вычитание двухзначных чисел</string>
-    <string name="additionHundreds">Сложение и вычитание трехзначных чисел</string>
-    <string name="negativeAddition">Сложение / вычитание отрицательных чисел</string>
-    <string name="negativeMultiplication">Умножение / деление отрицательных чисел</string>
-    <string name="negativeMixed">Отрицательные числа</string>
-    <string name="mixed">Смешанный (без отрицательных)</string>
+    <string name="touch">The pressing button</string>
+    <string name="lvlinfo">To increase the level of intelligence complete more tasks</string>
+    <string name="multiplicationDivision">Multiplication table with division</string>
+    <string name="multiplicationTable">Multiplication table without division</string>
+    <string name="additionSimple">Addition and subtraction of double digits</string>
+    <string name="additionHundreds">Addition and subtraction of three digits</string>
+    <string name="negativeAddition">Addition / Subtraction of negative numbers</string>
+    <string name="negativeMultiplication">Multiplication / Subtraction of negative numbers</string>
+    <string name="negativeMixed">Negative numbers</string>
+    <string name="mixed">Mixed (without negative numbers)</string>
     <string name="title_activity_settings">SettingsActivity</string>
+    <string name="infoApp">There are two modes in the app:  \n \n
+•	the main mode in which you can complete the tasks against the clock and there is always less time for the further task to complete; \n \n
+•	the training mode in which you can practice at your pace, so the time for doing tasks is not counted.  \n \n
+Moreover, there are the several levels in the app, but initially only the first one is accessible. While doing the tasks and earning the intellect points you will open the new levels, get the titles and awards. \n \n
+The community ADELVANCHIK is constantly working on the app to offer you a product that lets you improve your computing skills, train your speed of mental maths, reaction and attention in an entertaining form, so that is how we want to show that maths can be interesticking  \n \n
+So we will be glad if you leave your feedback and we will definitely take into account your comments. \n
+
+ </string>
 
     <!-- Preference Titles -->
     <string name="messages_header">Messages</string>

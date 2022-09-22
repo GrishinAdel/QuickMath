@@ -10,9 +10,6 @@ import android.widget.ImageButton
 import android.widget.TextView
 import android.widget.Toast
 import com.adelvanchik.quickmath.R
-import com.yandex.mobile.ads.banner.BannerAdView
-import com.yandex.mobile.ads.common.AdRequest
-import com.yandex.mobile.ads.common.MobileAds
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 
@@ -37,11 +34,10 @@ class Result : Fragment() {
     override fun onStart() {
         super.onStart()
 
-        MobileAds.initialize(requireContext()) {}
-
-        val banner = view?.findViewById<BannerAdView>(R.id.banner)
-        val adRequest = AdRequest.Builder().build()
-        banner?.loadAd(adRequest)
+//        MobileAds.initialize(requireContext()) {}
+//        val banner = view?.findViewById<BannerAdView>(R.id.banner)
+//        val adRequest = AdRequest.Builder().build()
+//        banner?.loadAd(adRequest)
 
         Log.e("Result","starting")
 
@@ -104,17 +100,41 @@ class Result : Fragment() {
             val Inteligence: String = resources.getString(R.string.intellect)
             rateResult?.text = "${Inteligence} ${it}"
             val result = it.toInt()
-            var lvlInfoMaybeNew: String = ""
-            if (result>100000) lvlInfoMaybeNew = resources.getString(R.string.lvl8)
-            else if (result > 50000) lvlInfoMaybeNew = resources.getString(R.string.lvl7)
-            else if (result > 30000) lvlInfoMaybeNew = resources.getString(R.string.lvl6)
-            else if (result > 15000) lvlInfoMaybeNew = resources.getString(R.string.lvl7)
-            else if (result > 75000) lvlInfoMaybeNew = resources.getString(R.string.lvl4)
-            else if (result > 3000) lvlInfoMaybeNew = resources.getString(R.string.lvl3)
-            else if (result > 1000) lvlInfoMaybeNew = resources.getString(R.string.lvl2)
-            else if (result > 300) lvlInfoMaybeNew = resources.getString(R.string.lvl1)
-            else lvlInfoMaybeNew = resources.getString(R.string.lvl0)
-            vm.checkNewLvl(lvlInfoMaybeNew)
+            var lvlInfoMaybeNew: String = "0"
+            var lvlInfoInt: Int = 0
+            if (result>100000) {
+                lvlInfoMaybeNew = resources.getString(R.string.lvl8)
+                lvlInfoInt = 8
+            }
+            else if (result > 50000) {
+                lvlInfoInt = 7
+                lvlInfoMaybeNew = resources.getString(R.string.lvl7)
+            }
+            else if (result > 30000) {
+                lvlInfoInt = 6
+                lvlInfoMaybeNew = resources.getString(R.string.lvl6)
+            }
+            else if (result > 15000) {
+                lvlInfoInt = 5
+                lvlInfoMaybeNew = resources.getString(R.string.lvl5)
+            }
+            else if (result > 7500) {
+                lvlInfoInt = 4
+                lvlInfoMaybeNew = resources.getString(R.string.lvl4)
+            }
+            else if (result > 3000) {
+                lvlInfoInt = 3
+                lvlInfoMaybeNew = resources.getString(R.string.lvl3)
+            }
+            else if (result > 1000) {
+                lvlInfoInt = 2
+                lvlInfoMaybeNew = resources.getString(R.string.lvl2)
+            }
+            else if (result > 300) {
+                lvlInfoInt = 1
+                lvlInfoMaybeNew = resources.getString(R.string.lvl1)
+            }
+            vm.checkNewLvl(lvlInfoMaybeNew,lvlInfoInt)
         })
 
         vm.getNewLvl().observe(viewLifecycleOwner, {

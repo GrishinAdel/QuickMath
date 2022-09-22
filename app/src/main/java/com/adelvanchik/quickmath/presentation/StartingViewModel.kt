@@ -14,11 +14,7 @@ import com.adelvanchik.domain.usecases.expressionSimple.GetRandomExpressionSubtr
 import com.adelvanchik.domain.usecases.multiplicationTable.GetRandomExpressionMultiplicationTableDivisionUseCase
 import com.adelvanchik.domain.usecases.multiplicationTable.GetRandomExpressionMultiplicationTableUseCase
 
-class StartingViewModel(private val getRandomExpressionSubtractionSimpleUseCase: GetRandomExpressionSubtractionSimpleUseCase,
-                        private val getRandomExpressionSubtractionHundredsUseCase: GetRandomExpressionSubtractionHundredsUseCase,
-                        private val getRandomExpressionMultiplicationTableUseCase: GetRandomExpressionMultiplicationTableUseCase,
-                        private val getRandomExpressionMultiplicationTableDivisionUseCase: GetRandomExpressionMultiplicationTableDivisionUseCase,
-                        private val generatorExpressionUseCase: GeneratorExpressionUseCase,
+class StartingViewModel(private val generatorExpressionUseCase: GeneratorExpressionUseCase,
                         private val getDataUseCase: GetDataUseCase): ViewModel() {
 
     init {

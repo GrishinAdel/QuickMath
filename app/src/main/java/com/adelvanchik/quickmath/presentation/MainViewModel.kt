@@ -14,7 +14,13 @@ class MainViewModel(private val getDataUseCase: GetDataUseCase): ViewModel() {
         return namePerson
     }
 
-    fun getName() {
+    private val sound = MutableLiveData<String>()
+    fun get_soundMode(): MutableLiveData<String> {
+        return sound
+    }
+
+    fun start() {
         namePerson.value = getDataUseCase.execute(key = "namePerson")
+        sound.value = getDataUseCase.execute("sound")
     }
 }

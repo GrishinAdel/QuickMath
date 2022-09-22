@@ -11,7 +11,7 @@
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="70dp"
+        android:layout_height="50dp"
         android:gravity="center"
         android:text="@string/result"
         android:textColor="@color/white"
@@ -31,13 +31,13 @@
 
                 <TextView
                     android:id="@+id/rateResult"
-                    android:layout_marginTop="15dp"
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
-                    android:text="Интеллект"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:text="Интеллект 1200"
                     android:textColor="@color/blueblack"
-                    android:textSize="30sp"
-                    android:gravity="center" />
+                    android:textSize="30sp" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -50,7 +50,7 @@
                         android:id="@+id/betterResult"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:text="29"
+                        android:text="Лучший 45"
                         android:gravity="right"
                         android:textColor="@color/yellow"
                         android:textSize="30sp"
@@ -74,7 +74,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:gravity="center"
-                        android:text="17"
+                        android:text="Текущий 13"
                         android:textColor="@color/blueblack"
                         android:textSize="30sp" />
 
@@ -111,7 +111,7 @@
                         android:paddingLeft="10dp"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:text="999"
+                        android:text="17"
                         android:textColor="@color/green2"
                         android:textSize="30sp"
                         />
@@ -169,16 +169,16 @@
 
             </LinearLayout>
 
-                <com.yandex.mobile.ads.banner.BannerAdView
-                    xmlns:ads="http://schemas.android.com/apk/res-auto"
-                    android:id="@+id/banner"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="30dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    ads:adUnitId="R-M-344723-10"
-                    ads:adSize="BANNER"
-                    />
+<!--                <com.yandex.mobile.ads.banner.BannerAdView-->
+<!--                    xmlns:ads="http://schemas.android.com/apk/res-auto"-->
+<!--                    android:id="@+id/banner"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:layout_marginTop="30dp"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    ads:adUnitId="R-M-1952564-2"-->
+<!--                    ads:adSize="BANNER"-->
+<!--                    />-->
 
         </LinearLayout>
 

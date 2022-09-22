@@ -55,33 +55,33 @@ class Setting() : Fragment() {
             }
         }
 
-        vm.getlanguage()
-        val language: Array<String> = arrayOf("Русский", "English")
-        val spinnerLanguage = view?.findViewById<Spinner>(R.id.choice_language)
-        val arrayAdapter = ArrayAdapter<String>(requireContext(), android.R.layout.simple_spinner_dropdown_item, language)
-        spinnerLanguage?.adapter = arrayAdapter
-        spinnerLanguage?.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-            override fun onItemSelected(p0: AdapterView<*>?, p1: View?, position: Int, p3: Long) {
-                when(position) {
-                    0 -> {
-                        setLocale("RU")
-                        vm.saveLanguage(0)
-                    }
-                    1 -> {
-                        setLocale("EN")
-                        vm.saveLanguage(1)
-                    }
-                }
-            }
-
-            override fun onNothingSelected(p0: AdapterView<*>?) {
-
-            }
-
-        }
-        vm.getlanguageLiveData().observe(viewLifecycleOwner, {
-            spinnerLanguage?.setSelection(it)
-        })
+//        vm.getlanguage()
+//        val language: Array<String> = arrayOf("Русский", "English")
+//        val spinnerLanguage = view?.findViewById<Spinner>(R.id.choice_language)
+//        val arrayAdapter = ArrayAdapter<String>(requireContext(), android.R.layout.simple_spinner_dropdown_item, language)
+//        spinnerLanguage?.adapter = arrayAdapter
+//        spinnerLanguage?.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+//            override fun onItemSelected(p0: AdapterView<*>?, p1: View?, position: Int, p3: Long) {
+//                when(position) {
+//                    0 -> {
+//                        setLocale("RU")
+//                        vm.saveLanguage(0)
+//                    }
+//                    1 -> {
+//                        setLocale("EN")
+//                        vm.saveLanguage(1)
+//                    }
+//                }
+//            }
+//
+//            override fun onNothingSelected(p0: AdapterView<*>?) {
+//
+//            }
+//
+//        }
+//        vm.getlanguageLiveData().observe(viewLifecycleOwner, {
+//            spinnerLanguage?.setSelection(it)
+//        })
 
 
         vm.getSoundClickMode()

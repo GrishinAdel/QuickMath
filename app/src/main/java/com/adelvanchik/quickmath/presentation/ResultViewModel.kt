@@ -90,7 +90,6 @@ class ResultViewModel(private val saveDataUseCase: SaveDataUseCase,
         val NMD_time = getDataUseCase.execute(key = "NegativeMultiplicationDivision_yes").toInt()
         val NM_time = getDataUseCase.execute(key = "NegativeMixed_yes").toInt()
 
-
         val NAS_train = getDataUseCase.execute(key = "NegativeAdditionSubtraction_no").toInt()
         val NMD_train = getDataUseCase.execute(key = "NegativeMultiplicationDivision_no").toInt()
         val NM_train = getDataUseCase.execute(key = "NegativeMixed_no").toInt()
@@ -156,12 +155,13 @@ class ResultViewModel(private val saveDataUseCase: SaveDataUseCase,
 
     }
 
-    fun checkNewLvl(MaybeNewLvl: String) {
+    fun checkNewLvl(MaybeNewLvl: String, lvlInt: Int) {
         val lvlInfo: String = getDataUseCase.execute(key = "lvlInfo")
         if (!lvlInfo.equals(MaybeNewLvl)) {
             newLvl.value = true
         }
         saveDataUseCase.execute(key = "lvlInfo", value = MaybeNewLvl)
+        saveDataUseCase.execute(key = "lvlInfoInt", value = lvlInt.toString())
     }
 
 }

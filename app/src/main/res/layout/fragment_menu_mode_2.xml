@@ -60,18 +60,6 @@
             android:orientation="vertical">
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/Btn_starting_mixed"
-                android:padding="10dp"
-                android:layout_width="match_parent"
-                android:layout_height="120dp"
-                android:gravity="center"
-                android:text="@string/mixed"
-                android:textColor="@color/blueblack"
-                android:textSize="20sp"
-                android:background="@color/blue1"
-                />
-
-            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/Btn_starting_multiplicationTable2"
                 android:padding="10dp"
                 android:layout_marginTop="3dp"
@@ -90,10 +78,10 @@
                 android:layout_marginTop="3dp"
                 android:layout_height="120dp"
                 android:gravity="center"
-                android:text="@string/multiplicationDivision"
+                android:text="@string/lock"
                 android:textColor="@color/blueblack"
-                android:textSize="20sp"
-                android:background="@color/blue1"
+                android:textSize="40sp"
+                android:background="@color/mode_out"
                 android:layout_below="@id/Btn_starting_multiplicationTable2"
                 />
             <androidx.appcompat.widget.AppCompatButton
@@ -103,10 +91,10 @@
                 android:padding="10dp"
                 android:layout_height="120dp"
                 android:gravity="center"
-                android:text="@string/additionSimple"
+                android:text="@string/lock"
                 android:textColor="@color/blueblack"
-                android:textSize="20sp"
-                android:background="@color/blue1"
+                android:textSize="40sp"
+                android:background="@color/mode_out"
                 android:layout_below="@id/Btn_starting_multiplicationTableDivision2"
                 />
 
@@ -117,11 +105,24 @@
                 android:layout_width="match_parent"
                 android:layout_height="120dp"
                 android:gravity="center"
-                android:text="@string/additionHundreds"
+                android:text="@string/lock"
                 android:textColor="@color/blueblack"
-                android:textSize="20sp"
-                android:background="@color/blue1"
+                android:textSize="40sp"
+                android:background="@color/mode_out"
                 android:layout_below="@id/Btn_starting_additionSimple2"
+                />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/Btn_starting_mixed"
+                android:layout_marginTop="3dp"
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:gravity="center"
+                android:text="@string/lock"
+                android:textColor="@color/blueblack"
+                android:textSize="40sp"
+                android:background="@color/mode_out"
                 />
 
             <androidx.appcompat.widget.AppCompatButton
@@ -129,36 +130,36 @@
                 android:layout_width="match_parent"
                 android:layout_height="120dp"
                 android:layout_marginTop="3dp"
-                android:background="@color/blue1"
+                android:background="@color/mode_out"
                 android:gravity="center"
                 android:padding="10dp"
-                android:text="@string/negativeMultiplication"
+                android:text="@string/lock"
                 android:textColor="@color/blueblack"
-                android:textSize="20sp" />
+                android:textSize="40sp" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/Btn_starting_negative_addition2"
                 android:layout_width="match_parent"
                 android:layout_height="120dp"
                 android:layout_marginTop="3dp"
-                android:background="@color/blue1"
+                android:background="@color/mode_out"
                 android:gravity="center"
                 android:padding="10dp"
-                android:text="@string/negativeAddition"
+                android:text="@string/lock"
                 android:textColor="@color/blueblack"
-                android:textSize="20sp" />
+                android:textSize="40sp" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/Btn_starting_negative_mixed2"
                 android:layout_width="match_parent"
                 android:layout_height="120dp"
                 android:layout_marginTop="3dp"
-                android:background="@color/blue1"
+                android:background="@color/mode_out"
                 android:gravity="center"
                 android:padding="10dp"
-                android:text="@string/negativeMixed"
+                android:text="@string/lock"
                 android:textColor="@color/blueblack"
-                android:textSize="20sp" />
+                android:textSize="40sp" />
 
     </LinearLayout>
 </ScrollView>

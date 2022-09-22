@@ -37,7 +37,8 @@
                 android:padding="10dp"
                 android:textColor="@color/blueblack"
                 android:layout_margin="3dp"
-                android:textSize="25sp" />
+                android:textSize="20sp"
+                />
 
             <TextView
                 android:layout_width="match_parent"

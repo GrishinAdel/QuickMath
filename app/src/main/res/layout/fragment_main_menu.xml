@@ -11,6 +11,7 @@
 
     <ImageView
         android:id="@+id/imageView3"
+        android:backgroundTint="@color/blue2"
         android:layout_width="match_parent"
         android:layout_height="90dp"
         android:background="@color/bluewhite2"
@@ -19,23 +20,41 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent" />
 
+
+
+    <ImageButton
+        android:id="@+id/logo"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:background="@null"
+        android:contentDescription="@string/Go"
+        android:scaleType="centerInside"
+        android:src="@drawable/main_logo"
+        app:layout_constraintBottom_toTopOf="@+id/Btn_go_to_menu_mode"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
     <TextView
+        android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:background="@color/blue2"
         android:text=""
+        tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="-28dp"
-        tools:layout_editor_absoluteY="-4dp"
-        tools:ignore="MissingConstraints" />
+        tools:layout_editor_absoluteY="-4dp" />
 
-    <androidx.appcompat.widget.AppCompatButton
+    <ImageButton
         android:id="@+id/Btn_go_to_menu_mode"
         android:layout_width="match_parent"
-        android:layout_height="70dp"
+        android:layout_height="80dp"
         android:background="@color/blue1"
         android:text="@string/Go"
-        android:textColor="@color/blueblack"
         android:textSize="20sp"
+        android:src="@drawable/ic_play_button"
+        android:scaleType="fitCenter"
         app:layout_constraintBottom_toTopOf="@+id/imageView3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"

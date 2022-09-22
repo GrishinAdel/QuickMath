@@ -24,6 +24,8 @@ class Starting : Fragment() {
 
     private var timer: CountDownTimer? = null
     private var sound: Boolean = true
+    private var button_number_sound: Int = 0
+    private var soundButton: MediaPlayer? = null
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -43,19 +45,12 @@ class Starting : Fragment() {
     }
 
 
-
     override fun onStart() {
         super.onStart()
-
 
         val answerCorrectId = getResources().getIdentifier(R.raw.sound_answer_correct.toString(),
             "raw", activity?.packageName)
         val soundAnswerCorrect= MediaPlayer.create(context, answerCorrectId)
-
-
-        var buttonId = getResources().getIdentifier(R.raw.sound_button.toString(),
-            "raw", activity?.packageName)
-        var soundButton= MediaPlayer.create(context, buttonId)
 
 
         // Кнопка проверки ответа
@@ -108,62 +103,62 @@ class Starting : Fragment() {
         val btn_delete_last = view?.findViewById<Button>(R.id.btn_delete_last)
 
         btn_zero?.setOnClickListener {
-            if (sound) soundButton.start()
+            go_sound_click()
             vm.Input_answer("0")
         }
 
         btn_one?.setOnClickListener {
-            if (sound) soundButton.start()
+            go_sound_click()
             vm.Input_answer("1")
         }
 
         btn_two?.setOnClickListener {
-            if (sound) soundButton.start()
+            go_sound_click()
             vm.Input_answer("2")
         }
 
         btn_three?.setOnClickListener {
-            if (sound) soundButton.start()
+            go_sound_click()
             vm.Input_answer("3")
         }
 
         btn_four?.setOnClickListener {
-            if (sound) soundButton.start()
+            go_sound_click()
             vm.Input_answer("4")
         }
 
         btn_five?.setOnClickListener {
-            if (sound) soundButton.start()
+            go_sound_click()
             vm.Input_answer("5")
         }
 
         btn_six?.setOnClickListener {
-            if (sound) soundButton.start()
+            go_sound_click()
             vm.Input_answer("6")
         }
 
         btn_seven?.setOnClickListener {
-            if (sound) soundButton.start()
+            go_sound_click()
             vm.Input_answer("7")
         }
 
         btn_eight?.setOnClickListener {
-            if (sound) soundButton.start()
+            go_sound_click()
             vm.Input_answer("8")
         }
 
         btn_nine?.setOnClickListener {
-            if (sound) soundButton.start()
+            go_sound_click()
             vm.Input_answer("9")
         }
 
         btn_minus?.setOnClickListener {
-            if (sound) soundButton.start()
+            go_sound_click()
             vm.Input_answer("-")
         }
 
         btn_delete_last?.setOnClickListener {
-            if (sound) soundButton.start()
+            go_sound_click()
             vm.delete()
         }
 
@@ -204,32 +199,13 @@ class Starting : Fragment() {
         })
 
         vm.getSound().observe(viewLifecycleOwner, {
-            if (it.equals("0") or it.equals("off")) sound = false
+            if (it.equals("off")) sound = false
             else sound = true
         })
 
         vm.getSoundClick().observe(viewLifecycleOwner, {
-            when(it) {
-                0 -> {
-                buttonId = getResources().getIdentifier(R.raw.sound_button.toString(),
-                    "raw", activity?.packageName)
-                soundButton= MediaPlayer.create(context, buttonId)
-            }
-                1 -> {
-                buttonId = getResources().getIdentifier(R.raw.sound_button2.toString(),
-                    "raw", activity?.packageName)
-                soundButton= MediaPlayer.create(context, buttonId)
-            }
-                2 -> {
-
-                }
-                3 -> {
-
-                }
-                4 -> {
-
-                }
-            }
+            button_number_sound = it
+            loadSound()
         })
     }
 
@@ -252,5 +228,34 @@ class Starting : Fragment() {
         (activity as MainActivity).navController.navigate(R.id.action_starting_to_result, bundle)
     }
 
+    fun loadSound() {
+        when(button_number_sound) {
+            0 -> {
+                soundButton= MediaPlayer.create(context, getResources().getIdentifier(R.raw.sound_button.toString(),
+                    "raw", activity?.packageName))
+            }
+            1 -> {
+                soundButton = MediaPlayer.create(context, getResources().getIdentifier(R.raw.sound_button2.toString(),
+                    "raw", activity?.packageName))
+            }
+            2 -> {
+
+            }
+            3 -> {
+
+            }
+            4 -> {
+
+            }
+        }
+    }
+
+    fun go_sound_click() {
+        if (soundButton?.isPlaying == true) {
+            soundButton?.stop()
+            loadSound()
+        }
+        if (sound) soundButton?.start()
+    }
 
 }
